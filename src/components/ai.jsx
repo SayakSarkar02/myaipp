@@ -37,7 +37,7 @@ export default function Ai() {
         <form onSubmit={summary} className="form">
           <input type="text" placeholder="enter text" className="input_box" value={input} onChange={(e)=>setInput(e.target.value)}/>
           <button type="submit" className="App-link">
-            <h2 className="but_text">Summarize</h2>
+            <h2 className="but_text">Magic</h2>
           </button>
         </form>
         <div className="container"><p className="newLine">{data}</p></div>
