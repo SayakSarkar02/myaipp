@@ -20,13 +20,14 @@ export default function Ai() {
           model: "text-davinci-003",
           prompt: input,
           temperature: 0.3,
-          max_tokens: 50,
+          max_tokens: 200,
           top_p: 1.0,
           frequency_penalty: 0.0,
           presence_penalty: 0.0,
         });
         console.log(response);
-        setData(response.data.choices[0].text);
+        const text = response.data.choices[0].text.replace("\n\n","");
+        setData(text);
   }
 
   return (
@@ -34,12 +35,12 @@ export default function Ai() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <form onSubmit={summary} className="form">
-          <input type="text" placeholder="enter text" value={input} onChange={(e)=>setInput(e.target.value)}/>
+          <input type="text" placeholder="enter text" className="input_box" value={input} onChange={(e)=>setInput(e.target.value)}/>
           <button type="submit" className="App-link">
             <h2 className="but_text">Summarize</h2>
           </button>
         </form>
-        <p className="newLine">{data}</p>
+        <div className="container"><p className="newLine">{data}</p></div>
       </header>
     </div>
   );

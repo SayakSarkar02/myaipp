@@ -3,8 +3,18 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 35vmin;
   pointer-events: none;
+}
+
+.input_box{
+  padding: 1rem 4rem 1rem 4rem;
+  font-size: 1rem;
+  color: #41d6ff;
+  background-color: #40454f;
+  border-radius: 30px;
+  text-align: center;
+  border: 2px inset #15b6e3;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -25,10 +35,14 @@
 }
 
 .App-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #61dafb;
   color: #282c34;
+  border: 2px outset #15b6e3;
   border-radius: 50px;
-  margin-top: 30px;
+  margin: 30px;
 }
 
 .newLine{
@@ -44,6 +58,15 @@
 .App-link:hover {
   background-color: #15b6e3;
   border-style: inset;
+}
+
+.container{
+  background-color: #40454f;
+  padding: 2rem;
+  border-radius: 20px;
+  border-top: 8px solid #41d6ff;
+  margin: 25%;
+  margin-top: 20px;
 }
 
 .but_text{
